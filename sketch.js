@@ -4,7 +4,7 @@ const height = window.innerHeight - 40;
 let img;
 let pixel;
 let brightness;
-let map;
+let mapVar;
 let slider;
 let downsample;
 let fetchedImage;
@@ -37,8 +37,8 @@ function draw() {
               fetchedImage.pixels[pixel + 1] +
               fetchedImage.pixels[pixel + 2]) /
             3;
-          map = map(brightness, 0, 255, 0, ascii.length - 1);
-          text(ascii.charAt(map), i * downsample, j * downsample);
+          mapVar = map(brightness, 0, 255, 0, ascii.length - 1);
+          text(ascii.charAt(mapVar), i * downsample, j * downsample);
         }
       }
       fetchedImage.updatePixels();
